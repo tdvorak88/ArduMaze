@@ -1,0 +1,30 @@
+\hypertarget{_joystick_8h_source}{}\doxysection{Joystick.\+h}
+\mbox{\hyperlink{_joystick_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef Joystick\_h}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define Joystick\_h}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{//== Joystick pins ==//}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define X\_PIN A0}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define Y\_pin A1}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define Joy\_switch 7}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{comment}{//== Joystick values ==// (representated by individual bits)}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define NONE 0    }\textcolor{comment}{//deafult value for no input}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define SELECT 1  }\textcolor{comment}{// 1. bit}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define UP 2      }\textcolor{comment}{// 2. bit}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define DOWN 4    }\textcolor{comment}{// 3. bit}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define LEFT 8    }\textcolor{comment}{// 4. bit}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define RIGHT 16  }\textcolor{comment}{// 5. bit}}
+\DoxyCodeLine{18 \textcolor{comment}{//example for input RIGHT and UP while button IS PRESSED: 00010011 = 2\string^0 + 2\string^1 + 2\string^5 = 19, so the output would be 19}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keywordtype}{char} \mbox{\hyperlink{_joystick_8h_a6f18859ca5e9700f2faefe6bf23d400b}{read\_joystick}}();}
+\DoxyCodeLine{21 \textcolor{keywordtype}{void} \mbox{\hyperlink{_joystick_8h_ac2059e9f4ee81fef187a554d443df892}{setupJoystick}}();}
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{_joystick_8h_abb7037a66fe75438231eb252848f894b}{waitForAnyInput}}();}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} \mbox{\hyperlink{_joystick_8h_ac3177e0cf9aa6e831047f937883b1124}{waitForNoInput}}();}
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} \mbox{\hyperlink{_joystick_8h_ad6c45bc26221e19c02a6284ea76e9b65}{waitForSelect}}();}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

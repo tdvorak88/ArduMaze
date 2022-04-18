@@ -1,0 +1,40 @@
+\hypertarget{_graphics_8h_source}{}\doxysection{Graphics.\+h}
+\mbox{\hyperlink{_graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef Graphics\_h}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define Graphics\_h}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}U8g2lib.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_maze_generator_8h}{MazeGenerator.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//== View Values ==//}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define NORTH 0}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define EAST 1}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define SOUTH 2}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define WEST 3}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structcell}{cell}} \mbox{\hyperlink{_graphics_8h_a0c216fb684f62d9a28b50be610a0d026}{playerPos}};}
+\DoxyCodeLine{15 \textcolor{keyword}{extern} \textcolor{keywordtype}{char} \mbox{\hyperlink{_graphics_8h_a03089d3c9c5e03b6a7efdcb3f78475bc}{exitPosX}};}
+\DoxyCodeLine{16 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \mbox{\hyperlink{_graphics_8h_ab4ae7205573977222eadd0795db193e2}{steps}};}
+\DoxyCodeLine{17 \textcolor{keyword}{extern} \textcolor{keywordtype}{char} \mbox{\hyperlink{_graphics_8h_ac2f941c0f8c637f1da039d4e1d0e14fe}{menuPosition}};}
+\DoxyCodeLine{18 \textcolor{keyword}{extern} \textcolor{keywordtype}{char} \mbox{\hyperlink{_graphics_8h_a4caf50e052f49c88c6c43a0a29bba362}{pausePosition}};}
+\DoxyCodeLine{19 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{_graphics_8h_a477ea6363106d20b974ef84a74df01d3}{menuItems}}[];}
+\DoxyCodeLine{20 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{_graphics_8h_a8b0cb73646a047bb9d25e60184785322}{pauseItems}}[];}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_a5a5806312e2a4ec607460c871696bfd7}{setFontDefault}}();}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_aa13653318c21b0e6b86838e6091bfc9a}{drawMenu}}();}
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_abb7c64ebd75a9a9ed2f97f895e52f387}{writeScore}}();}
+\DoxyCodeLine{25 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_aecb1b9aa0ef409dea6fbcb2207f1ae65}{drawLeaderboard}}();}
+\DoxyCodeLine{26 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_a0fd1bfe62dd8084fc7e285925d219f60}{drawHelp}}();}
+\DoxyCodeLine{27 \textcolor{keywordtype}{char} \mbox{\hyperlink{_graphics_8h_aaff445d7eafd67e12363bc8e6af45236}{getViewedCell}}();}
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_afb37cbf1155e12aeb722ee31cbcb8270}{drawSerial}}();  \textcolor{comment}{//only for debugging}}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_ab4b66b962d7696d628bdcd154d1526a9}{draw2DPlayer}}();}
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_a1013e7d46247a7a664cea5ec934eae9b}{draw2D}}();}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_ab5faa224cc65d6fbce2935d0ed45f600}{drawGrid}}();}
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_a3260872d918c6673d230120fc49e704a}{draw3D}}();}
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_aa17be6b74511484983f4f2356e7ce1a2}{drawEndScreen}}();}
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{_graphics_8h_ac28e9770167b7e50d37eaca915cb6ace}{drawPause}}();}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

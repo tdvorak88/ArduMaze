@@ -1,0 +1,145 @@
+\hypertarget{_graphics_8cpp}{}\doxysection{Graphics.\+cpp File Reference}
+\label{_graphics_8cpp}\index{Graphics.cpp@{Graphics.cpp}}
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U8g2lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Joystick.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Maze\+Generator.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Menu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+U8\+G2\+\_\+\+PCD8544\+\_\+84\+X48\+\_\+\+F\+\_\+4\+W\+\_\+\+SW\+\_\+\+SPI \mbox{\hyperlink{_graphics_8cpp_a23044b8b74622b793ce108531b5abd3c}{u8g2}} (U8\+G2\+\_\+\+R2, 13, 11, 10, 9, 8)
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_a5a5806312e2a4ec607460c871696bfd7}{set\+Font\+Default}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_aa13653318c21b0e6b86838e6091bfc9a}{draw\+Menu}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_abb7c64ebd75a9a9ed2f97f895e52f387}{write\+Score}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_aecb1b9aa0ef409dea6fbcb2207f1ae65}{draw\+Leaderboard}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_a0fd1bfe62dd8084fc7e285925d219f60}{draw\+Help}} ()
+\item 
+char \mbox{\hyperlink{_graphics_8cpp_ab244a85fceff4948c34095238215ff66}{get\+Viewed\+Cell}} (char x, char y)
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_afb37cbf1155e12aeb722ee31cbcb8270}{draw\+Serial}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_ab4b66b962d7696d628bdcd154d1526a9}{draw2\+DPlayer}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_a1013e7d46247a7a664cea5ec934eae9b}{draw2D}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_ab5faa224cc65d6fbce2935d0ed45f600}{draw\+Grid}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_a3260872d918c6673d230120fc49e704a}{draw3D}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_aa17be6b74511484983f4f2356e7ce1a2}{draw\+End\+Screen}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8cpp_ac28e9770167b7e50d37eaca915cb6ace}{draw\+Pause}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_graphics_8cpp_a0d9a025a5d682b9fe060c8ba8d5f4c69}{view}} = \mbox{\hyperlink{_graphics_8h_a1711232abf72723b5216c206e6bbb175}{NORTH}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_graphics_8cpp_a1013e7d46247a7a664cea5ec934eae9b}\label{_graphics_8cpp_a1013e7d46247a7a664cea5ec934eae9b}} 
+\index{Graphics.cpp@{Graphics.cpp}!draw2D@{draw2D}}
+\index{draw2D@{draw2D}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{draw2D()}{draw2D()}}
+{\footnotesize\ttfamily void draw2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_ab4b66b962d7696d628bdcd154d1526a9}\label{_graphics_8cpp_ab4b66b962d7696d628bdcd154d1526a9}} 
+\index{Graphics.cpp@{Graphics.cpp}!draw2DPlayer@{draw2DPlayer}}
+\index{draw2DPlayer@{draw2DPlayer}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{draw2DPlayer()}{draw2DPlayer()}}
+{\footnotesize\ttfamily void draw2\+DPlayer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_a3260872d918c6673d230120fc49e704a}\label{_graphics_8cpp_a3260872d918c6673d230120fc49e704a}} 
+\index{Graphics.cpp@{Graphics.cpp}!draw3D@{draw3D}}
+\index{draw3D@{draw3D}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{draw3D()}{draw3D()}}
+{\footnotesize\ttfamily void draw3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_aa17be6b74511484983f4f2356e7ce1a2}\label{_graphics_8cpp_aa17be6b74511484983f4f2356e7ce1a2}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawEndScreen@{drawEndScreen}}
+\index{drawEndScreen@{drawEndScreen}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawEndScreen()}{drawEndScreen()}}
+{\footnotesize\ttfamily void draw\+End\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_ab5faa224cc65d6fbce2935d0ed45f600}\label{_graphics_8cpp_ab5faa224cc65d6fbce2935d0ed45f600}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawGrid@{drawGrid}}
+\index{drawGrid@{drawGrid}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawGrid()}{drawGrid()}}
+{\footnotesize\ttfamily void draw\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_a0fd1bfe62dd8084fc7e285925d219f60}\label{_graphics_8cpp_a0fd1bfe62dd8084fc7e285925d219f60}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawHelp@{drawHelp}}
+\index{drawHelp@{drawHelp}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawHelp()}{drawHelp()}}
+{\footnotesize\ttfamily void draw\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_aecb1b9aa0ef409dea6fbcb2207f1ae65}\label{_graphics_8cpp_aecb1b9aa0ef409dea6fbcb2207f1ae65}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawLeaderboard@{drawLeaderboard}}
+\index{drawLeaderboard@{drawLeaderboard}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawLeaderboard()}{drawLeaderboard()}}
+{\footnotesize\ttfamily void draw\+Leaderboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_aa13653318c21b0e6b86838e6091bfc9a}\label{_graphics_8cpp_aa13653318c21b0e6b86838e6091bfc9a}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawMenu@{drawMenu}}
+\index{drawMenu@{drawMenu}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawMenu()}{drawMenu()}}
+{\footnotesize\ttfamily void draw\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_ac28e9770167b7e50d37eaca915cb6ace}\label{_graphics_8cpp_ac28e9770167b7e50d37eaca915cb6ace}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawPause@{drawPause}}
+\index{drawPause@{drawPause}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPause()}{drawPause()}}
+{\footnotesize\ttfamily void draw\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_afb37cbf1155e12aeb722ee31cbcb8270}\label{_graphics_8cpp_afb37cbf1155e12aeb722ee31cbcb8270}} 
+\index{Graphics.cpp@{Graphics.cpp}!drawSerial@{drawSerial}}
+\index{drawSerial@{drawSerial}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{drawSerial()}{drawSerial()}}
+{\footnotesize\ttfamily void draw\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_ab244a85fceff4948c34095238215ff66}\label{_graphics_8cpp_ab244a85fceff4948c34095238215ff66}} 
+\index{Graphics.cpp@{Graphics.cpp}!getViewedCell@{getViewedCell}}
+\index{getViewedCell@{getViewedCell}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{getViewedCell()}{getViewedCell()}}
+{\footnotesize\ttfamily char get\+Viewed\+Cell (\begin{DoxyParamCaption}\item[{char}]{x,  }\item[{char}]{y }\end{DoxyParamCaption})}
+
+Checks a location of a cell realtive to player view and returns its actual location in maze \begin{DoxyItemize}
+\item x x-\/coordinate \item y y-\/coordinate \begin{DoxyReturn}{Returns}
+what is on coordinate \mbox{[}x,y\mbox{]} 
+\end{DoxyReturn}
+\end{DoxyItemize}
+\mbox{\Hypertarget{_graphics_8cpp_a5a5806312e2a4ec607460c871696bfd7}\label{_graphics_8cpp_a5a5806312e2a4ec607460c871696bfd7}} 
+\index{Graphics.cpp@{Graphics.cpp}!setFontDefault@{setFontDefault}}
+\index{setFontDefault@{setFontDefault}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{setFontDefault()}{setFontDefault()}}
+{\footnotesize\ttfamily void set\+Font\+Default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_a23044b8b74622b793ce108531b5abd3c}\label{_graphics_8cpp_a23044b8b74622b793ce108531b5abd3c}} 
+\index{Graphics.cpp@{Graphics.cpp}!u8g2@{u8g2}}
+\index{u8g2@{u8g2}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{u8g2()}{u8g2()}}
+{\footnotesize\ttfamily U8\+G2\+\_\+\+PCD8544\+\_\+84\+X48\+\_\+\+F\+\_\+4\+W\+\_\+\+SW\+\_\+\+SPI u8g2 (\begin{DoxyParamCaption}\item[{U8\+G2\+\_\+\+R2}]{,  }\item[{13}]{,  }\item[{11}]{,  }\item[{10}]{,  }\item[{9}]{,  }\item[{8}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8cpp_abb7c64ebd75a9a9ed2f97f895e52f387}\label{_graphics_8cpp_abb7c64ebd75a9a9ed2f97f895e52f387}} 
+\index{Graphics.cpp@{Graphics.cpp}!writeScore@{writeScore}}
+\index{writeScore@{writeScore}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{writeScore()}{writeScore()}}
+{\footnotesize\ttfamily void write\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_graphics_8cpp_a0d9a025a5d682b9fe060c8ba8d5f4c69}\label{_graphics_8cpp_a0d9a025a5d682b9fe060c8ba8d5f4c69}} 
+\index{Graphics.cpp@{Graphics.cpp}!view@{view}}
+\index{view@{view}!Graphics.cpp@{Graphics.cpp}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily char view = \mbox{\hyperlink{_graphics_8h_a1711232abf72723b5216c206e6bbb175}{NORTH}}}
+

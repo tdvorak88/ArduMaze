@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1647533401 source:c:\users\tdvor\documents\arduino\ardumaze\mazegenerator\main.cpp
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+

@@ -1,0 +1,86 @@
+\hypertarget{_menu_8cpp}{}\doxysection{Menu.\+cpp File Reference}
+\label{_menu_8cpp}\index{Menu.cpp@{Menu.cpp}}
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Joystick.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Graphics.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_menu_8cpp_a17b7b70e592498ef83bf837481e303af}{do\+Menu}} ()
+\item 
+char \mbox{\hyperlink{_menu_8cpp_abf607174f91d75fc0c42b6bb30d1d870}{do\+Pause}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{_menu_8cpp_ac2f941c0f8c637f1da039d4e1d0e14fe}{menu\+Position}} = 0
+\item 
+const char $\ast$ \mbox{\hyperlink{_menu_8cpp_a477ea6363106d20b974ef84a74df01d3}{menu\+Items}} \mbox{[}$\,$\mbox{]}
+\item 
+char \mbox{\hyperlink{_menu_8cpp_a4caf50e052f49c88c6c43a0a29bba362}{pause\+Position}} = 0
+\item 
+const char $\ast$ \mbox{\hyperlink{_menu_8cpp_a8b0cb73646a047bb9d25e60184785322}{pause\+Items}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_menu_8cpp_a17b7b70e592498ef83bf837481e303af}\label{_menu_8cpp_a17b7b70e592498ef83bf837481e303af}} 
+\index{Menu.cpp@{Menu.cpp}!doMenu@{doMenu}}
+\index{doMenu@{doMenu}!Menu.cpp@{Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{doMenu()}{doMenu()}}
+{\footnotesize\ttfamily char do\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_menu_8cpp_abf607174f91d75fc0c42b6bb30d1d870}\label{_menu_8cpp_abf607174f91d75fc0c42b6bb30d1d870}} 
+\index{Menu.cpp@{Menu.cpp}!doPause@{doPause}}
+\index{doPause@{doPause}!Menu.cpp@{Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{doPause()}{doPause()}}
+{\footnotesize\ttfamily char do\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_menu_8cpp_a477ea6363106d20b974ef84a74df01d3}\label{_menu_8cpp_a477ea6363106d20b974ef84a74df01d3}} 
+\index{Menu.cpp@{Menu.cpp}!menuItems@{menuItems}}
+\index{menuItems@{menuItems}!Menu.cpp@{Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{menuItems}{menuItems}}
+{\footnotesize\ttfamily const char$\ast$ menu\+Items\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Start Game"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Leaderboard"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Help"{}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_menu_8cpp_ac2f941c0f8c637f1da039d4e1d0e14fe}\label{_menu_8cpp_ac2f941c0f8c637f1da039d4e1d0e14fe}} 
+\index{Menu.cpp@{Menu.cpp}!menuPosition@{menuPosition}}
+\index{menuPosition@{menuPosition}!Menu.cpp@{Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{menuPosition}{menuPosition}}
+{\footnotesize\ttfamily char menu\+Position = 0}
+
+\mbox{\Hypertarget{_menu_8cpp_a8b0cb73646a047bb9d25e60184785322}\label{_menu_8cpp_a8b0cb73646a047bb9d25e60184785322}} 
+\index{Menu.cpp@{Menu.cpp}!pauseItems@{pauseItems}}
+\index{pauseItems@{pauseItems}!Menu.cpp@{Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{pauseItems}{pauseItems}}
+{\footnotesize\ttfamily const char$\ast$ pause\+Items\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Resume"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Help"{}},}
+\DoxyCodeLine{  \textcolor{stringliteral}{"{}Exit"{}},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_menu_8cpp_a4caf50e052f49c88c6c43a0a29bba362}\label{_menu_8cpp_a4caf50e052f49c88c6c43a0a29bba362}} 
+\index{Menu.cpp@{Menu.cpp}!pausePosition@{pausePosition}}
+\index{pausePosition@{pausePosition}!Menu.cpp@{Menu.cpp}}
+\doxysubsubsection{\texorpdfstring{pausePosition}{pausePosition}}
+{\footnotesize\ttfamily char pause\+Position = 0}
+

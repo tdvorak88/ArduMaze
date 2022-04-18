@@ -1,0 +1,131 @@
+\hypertarget{_maze_generator_8h}{}\doxysection{Maze\+Generator.\+h File Reference}
+\label{_maze_generator_8h}\index{MazeGenerator.h@{MazeGenerator.h}}
+{\ttfamily \#include \char`\"{}U8g2lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcell}{cell}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_maze_generator_8h_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}~11
+\item 
+\#define \mbox{\hyperlink{_maze_generator_8h_a25602e1c79852e5be195490eceff513f}{MAXY}}~11
+\item 
+\#define \mbox{\hyperlink{_maze_generator_8h_ac749b87dd5d843e4add3eb8e8a130f62}{WALL}}~-\/1
+\item 
+\#define \mbox{\hyperlink{_maze_generator_8h_a2b7cf2a3641be7b89138615764d60ba3}{EMPTY}}~-\/2
+\item 
+\#define \mbox{\hyperlink{_maze_generator_8h_abd6df09e6addc4c9ed2dddb6450b0faf}{PILLAR}}~-\/3
+\item 
+\#define \mbox{\hyperlink{_maze_generator_8h_ad111e603bbebe5d87f6bc39264ce4733}{EXIT}}~-\/4
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_maze_generator_8h_ac81ff6aa35e00529c7c70c544401b54a}{setup\+Maze}} ()
+\item 
+void \mbox{\hyperlink{_maze_generator_8h_ab1f321a2f17fa8ba0f5ab4e2621fd6d6}{start\+Game}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcell}{cell}} \mbox{\hyperlink{_maze_generator_8h_a0c216fb684f62d9a28b50be610a0d026}{player\+Pos}}
+\item 
+char \mbox{\hyperlink{_maze_generator_8h_aac0982a47978c140453f22c3b0b10f3b}{maze}} \mbox{[}\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}\mbox{]}
+\item 
+char \mbox{\hyperlink{_maze_generator_8h_a0d9a025a5d682b9fe060c8ba8d5f4c69}{view}}
+\item 
+const char \mbox{\hyperlink{_maze_generator_8h_a18c7a54c91d2e7ae4696ef7bb976bf4c}{zoom}} = 4
+\item 
+const char \mbox{\hyperlink{_maze_generator_8h_a94711d59b52152319263058641071cf8}{plrsmax}} = ((\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}} -\/ 3) / 2) $\ast$ ((\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}} -\/ 3) / 2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_maze_generator_8h_a2b7cf2a3641be7b89138615764d60ba3}\label{_maze_generator_8h_a2b7cf2a3641be7b89138615764d60ba3}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!EMPTY@{EMPTY}}
+\index{EMPTY@{EMPTY}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{EMPTY}{EMPTY}}
+{\footnotesize\ttfamily \#define EMPTY~-\/2}
+
+\mbox{\Hypertarget{_maze_generator_8h_ad111e603bbebe5d87f6bc39264ce4733}\label{_maze_generator_8h_ad111e603bbebe5d87f6bc39264ce4733}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!EXIT@{EXIT}}
+\index{EXIT@{EXIT}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{EXIT}{EXIT}}
+{\footnotesize\ttfamily \#define EXIT~-\/4}
+
+\mbox{\Hypertarget{_maze_generator_8h_a7bb5845dcf8072f09f0a8d246b47e032}\label{_maze_generator_8h_a7bb5845dcf8072f09f0a8d246b47e032}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!MAXX@{MAXX}}
+\index{MAXX@{MAXX}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{MAXX}{MAXX}}
+{\footnotesize\ttfamily \#define MAXX~11}
+
+\mbox{\Hypertarget{_maze_generator_8h_a25602e1c79852e5be195490eceff513f}\label{_maze_generator_8h_a25602e1c79852e5be195490eceff513f}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!MAXY@{MAXY}}
+\index{MAXY@{MAXY}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{MAXY}{MAXY}}
+{\footnotesize\ttfamily \#define MAXY~11}
+
+\mbox{\Hypertarget{_maze_generator_8h_abd6df09e6addc4c9ed2dddb6450b0faf}\label{_maze_generator_8h_abd6df09e6addc4c9ed2dddb6450b0faf}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!PILLAR@{PILLAR}}
+\index{PILLAR@{PILLAR}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{PILLAR}{PILLAR}}
+{\footnotesize\ttfamily \#define PILLAR~-\/3}
+
+\mbox{\Hypertarget{_maze_generator_8h_ac749b87dd5d843e4add3eb8e8a130f62}\label{_maze_generator_8h_ac749b87dd5d843e4add3eb8e8a130f62}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!WALL@{WALL}}
+\index{WALL@{WALL}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{WALL}{WALL}}
+{\footnotesize\ttfamily \#define WALL~-\/1}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_maze_generator_8h_ac81ff6aa35e00529c7c70c544401b54a}\label{_maze_generator_8h_ac81ff6aa35e00529c7c70c544401b54a}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!setupMaze@{setupMaze}}
+\index{setupMaze@{setupMaze}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{setupMaze()}{setupMaze()}}
+{\footnotesize\ttfamily void setup\+Maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fills maze with walls and empty space. \mbox{\Hypertarget{_maze_generator_8h_ab1f321a2f17fa8ba0f5ab4e2621fd6d6}\label{_maze_generator_8h_ab1f321a2f17fa8ba0f5ab4e2621fd6d6}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!startGame@{startGame}}
+\index{startGame@{startGame}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily void start\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_maze_generator_8h_aac0982a47978c140453f22c3b0b10f3b}\label{_maze_generator_8h_aac0982a47978c140453f22c3b0b10f3b}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!maze@{maze}}
+\index{maze@{maze}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{maze}{maze}}
+{\footnotesize\ttfamily char maze\mbox{[}\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_maze_generator_8h_a0c216fb684f62d9a28b50be610a0d026}\label{_maze_generator_8h_a0c216fb684f62d9a28b50be610a0d026}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!playerPos@{playerPos}}
+\index{playerPos@{playerPos}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{playerPos}{playerPos}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcell}{cell}} player\+Pos\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_maze_generator_8h_a94711d59b52152319263058641071cf8}\label{_maze_generator_8h_a94711d59b52152319263058641071cf8}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!plrsmax@{plrsmax}}
+\index{plrsmax@{plrsmax}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{plrsmax}{plrsmax}}
+{\footnotesize\ttfamily const char plrsmax = ((\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}} -\/ 3) / 2) $\ast$ ((\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}} -\/ 3) / 2)}
+
+\mbox{\Hypertarget{_maze_generator_8h_a0d9a025a5d682b9fe060c8ba8d5f4c69}\label{_maze_generator_8h_a0d9a025a5d682b9fe060c8ba8d5f4c69}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!view@{view}}
+\index{view@{view}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily char view\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_maze_generator_8h_a18c7a54c91d2e7ae4696ef7bb976bf4c}\label{_maze_generator_8h_a18c7a54c91d2e7ae4696ef7bb976bf4c}} 
+\index{MazeGenerator.h@{MazeGenerator.h}!zoom@{zoom}}
+\index{zoom@{zoom}!MazeGenerator.h@{MazeGenerator.h}}
+\doxysubsubsection{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily const char zoom = 4}
+

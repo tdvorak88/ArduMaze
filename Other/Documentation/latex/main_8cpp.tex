@@ -1,0 +1,129 @@
+\hypertarget{main_8cpp}{}\doxysection{Maze\+Generator/main.cpp File Reference}
+\label{main_8cpp}\index{MazeGenerator/main.cpp@{MazeGenerator/main.cpp}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcell}{cell}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}~11
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}~11
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ac749b87dd5d843e4add3eb8e8a130f62}{WALL}}~-\/1
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a2b7cf2a3641be7b89138615764d60ba3}{EMPTY}}~-\/2
+\item 
+\#define \mbox{\hyperlink{main_8cpp_abd6df09e6addc4c9ed2dddb6450b0faf}{PILLAR}}~-\/3
+\item 
+\#define \mbox{\hyperlink{main_8cpp_aad83b5ec5f8d43384c666cf26865aaea}{PLAYER}}~-\/4
+\item 
+\#define \mbox{\hyperlink{main_8cpp_aaf95f2c3c632fb628d7af787515e4428}{FINISH}}~-\/5
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_ac81ff6aa35e00529c7c70c544401b54a}{setup\+Maze}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_afe41551432446c6530c986d68fbf850c}{print\+Maze}} ()
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{main_8cpp_aac0982a47978c140453f22c3b0b10f3b}{maze}} \mbox{[}\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}\mbox{]}
+\item 
+const int \mbox{\hyperlink{main_8cpp_a74fe901e29452c1477f9ca2013176c92}{plrsmax}} = ((\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}-\/3)/2)$\ast$((\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}-\/3)/2)
+\item 
+\mbox{\hyperlink{structcell}{cell}} \mbox{\hyperlink{main_8cpp_a6fc0ff94e9334a3dc4c51548635cd1d9}{pillar}} \mbox{[}\mbox{\hyperlink{main_8cpp_a74fe901e29452c1477f9ca2013176c92}{plrsmax}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_a2b7cf2a3641be7b89138615764d60ba3}\label{main_8cpp_a2b7cf2a3641be7b89138615764d60ba3}} 
+\index{main.cpp@{main.cpp}!EMPTY@{EMPTY}}
+\index{EMPTY@{EMPTY}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{EMPTY}{EMPTY}}
+{\footnotesize\ttfamily \#define EMPTY~-\/2}
+
+\mbox{\Hypertarget{main_8cpp_aaf95f2c3c632fb628d7af787515e4428}\label{main_8cpp_aaf95f2c3c632fb628d7af787515e4428}} 
+\index{main.cpp@{main.cpp}!FINISH@{FINISH}}
+\index{FINISH@{FINISH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{FINISH}{FINISH}}
+{\footnotesize\ttfamily \#define FINISH~-\/5}
+
+\mbox{\Hypertarget{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}\label{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}} 
+\index{main.cpp@{main.cpp}!MAXX@{MAXX}}
+\index{MAXX@{MAXX}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXX}{MAXX}}
+{\footnotesize\ttfamily \#define MAXX~11}
+
+\mbox{\Hypertarget{main_8cpp_a25602e1c79852e5be195490eceff513f}\label{main_8cpp_a25602e1c79852e5be195490eceff513f}} 
+\index{main.cpp@{main.cpp}!MAXY@{MAXY}}
+\index{MAXY@{MAXY}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MAXY}{MAXY}}
+{\footnotesize\ttfamily \#define MAXY~11}
+
+\mbox{\Hypertarget{main_8cpp_abd6df09e6addc4c9ed2dddb6450b0faf}\label{main_8cpp_abd6df09e6addc4c9ed2dddb6450b0faf}} 
+\index{main.cpp@{main.cpp}!PILLAR@{PILLAR}}
+\index{PILLAR@{PILLAR}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PILLAR}{PILLAR}}
+{\footnotesize\ttfamily \#define PILLAR~-\/3}
+
+\mbox{\Hypertarget{main_8cpp_aad83b5ec5f8d43384c666cf26865aaea}\label{main_8cpp_aad83b5ec5f8d43384c666cf26865aaea}} 
+\index{main.cpp@{main.cpp}!PLAYER@{PLAYER}}
+\index{PLAYER@{PLAYER}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PLAYER}{PLAYER}}
+{\footnotesize\ttfamily \#define PLAYER~-\/4}
+
+\mbox{\Hypertarget{main_8cpp_ac749b87dd5d843e4add3eb8e8a130f62}\label{main_8cpp_ac749b87dd5d843e4add3eb8e8a130f62}} 
+\index{main.cpp@{main.cpp}!WALL@{WALL}}
+\index{WALL@{WALL}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WALL}{WALL}}
+{\footnotesize\ttfamily \#define WALL~-\/1}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_afe41551432446c6530c986d68fbf850c}\label{main_8cpp_afe41551432446c6530c986d68fbf850c}} 
+\index{main.cpp@{main.cpp}!printMaze@{printMaze}}
+\index{printMaze@{printMaze}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{printMaze()}{printMaze()}}
+{\footnotesize\ttfamily void print\+Maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_ac81ff6aa35e00529c7c70c544401b54a}\label{main_8cpp_ac81ff6aa35e00529c7c70c544401b54a}} 
+\index{main.cpp@{main.cpp}!setupMaze@{setupMaze}}
+\index{setupMaze@{setupMaze}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{setupMaze()}{setupMaze()}}
+{\footnotesize\ttfamily void setup\+Maze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fills maze with walls and empty space. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_aac0982a47978c140453f22c3b0b10f3b}\label{main_8cpp_aac0982a47978c140453f22c3b0b10f3b}} 
+\index{main.cpp@{main.cpp}!maze@{maze}}
+\index{maze@{maze}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{maze}{maze}}
+{\footnotesize\ttfamily char maze\mbox{[}\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}\mbox{]}}
+
+\mbox{\Hypertarget{main_8cpp_a6fc0ff94e9334a3dc4c51548635cd1d9}\label{main_8cpp_a6fc0ff94e9334a3dc4c51548635cd1d9}} 
+\index{main.cpp@{main.cpp}!pillar@{pillar}}
+\index{pillar@{pillar}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{pillar}{pillar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcell}{cell}} pillar\mbox{[}\mbox{\hyperlink{main_8cpp_a74fe901e29452c1477f9ca2013176c92}{plrsmax}}\mbox{]}}
+
+\mbox{\Hypertarget{main_8cpp_a74fe901e29452c1477f9ca2013176c92}\label{main_8cpp_a74fe901e29452c1477f9ca2013176c92}} 
+\index{main.cpp@{main.cpp}!plrsmax@{plrsmax}}
+\index{plrsmax@{plrsmax}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{plrsmax}{plrsmax}}
+{\footnotesize\ttfamily const int plrsmax = ((\mbox{\hyperlink{main_8cpp_a7bb5845dcf8072f09f0a8d246b47e032}{MAXX}}-\/3)/2)$\ast$((\mbox{\hyperlink{main_8cpp_a25602e1c79852e5be195490eceff513f}{MAXY}}-\/3)/2)}
+

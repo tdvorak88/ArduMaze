@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowchartSaveContainer>
+    <flowchart>
+        <mainSegment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="layoutSegment" xmlID="0">
+            <element xsi:type="layoutElement" xmlID="1" parentSegment="0">
+                <startEnd>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Start</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Start</value>
+                </startEnd>
+            </element>
+            <element xsi:type="layoutElement" xmlID="3" parentSegment="0">
+                <process>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Main Screen</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Main Screen</value>
+                </process>
+            </element>
+            <element xsi:type="layoutElement" xmlID="15" parentSegment="0">
+                <loopStart>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Start Menu</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Start Menu</value>
+                    <overHanged>true</overHanged>
+                </loopStart>
+                <segment xsi:nil="true"/>
+                <segment xsi:type="layoutSegment" xmlID="16" parentElement="15">
+                    <element xsi:type="layoutElement" xmlID="4" parentSegment="16">
+                        <switch>
+                            <borderColor>0,0,0,255</borderColor>
+                            <shapeUpColor>255,255,255,255</shapeUpColor>
+                            <shapeDownColor>230,230,230,255</shapeDownColor>
+                            <hasShadow>true</hasShadow>
+                            <customValue>Menu</customValue>
+                            <commandsValid>true</commandsValid>
+                            <value>Menu</value>
+                        </switch>
+                        <segment xsi:type="layoutSegment" xmlID="5" parentElement="4">
+                            <element xsi:type="layoutElement" xmlID="8" parentSegment="5">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Show the Help Screen</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Show the Help Screen</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="12" parentSegment="5">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Any Input</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Any Input</value>
+</process>
+                            </element>
+                            <customDescription>Help</customDescription>
+                            <description>Help</description>
+                        </segment>
+                        <segment xsi:type="layoutSegment" xmlID="6" parentElement="4">
+                            <element xsi:type="layoutElement" xmlID="9" parentSegment="6">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Show the Leaderboard</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Show the Leaderboard</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="13" parentSegment="6">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Any Input</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Any Input</value>
+</process>
+                            </element>
+                            <customDescription>Leaderboard</customDescription>
+                            <description>Leaderboard</description>
+                        </segment>
+                        <segment xsi:type="layoutSegment" xmlID="7" parentElement="4">
+                            <element xsi:type="layoutElement" xmlID="10" parentSegment="7">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Generate Maze</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Generate Maze</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="11" parentSegment="7">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Start Timer</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Start Timer</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="46" parentSegment="7">
+<loopStart>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Start game
+(or continue in loop)</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Start game
+(or continue in loop)</value>
+    <overHanged>false</overHanged>
+</loopStart>
+<segment xsi:nil="true"/>
+<segment xsi:type="layoutSegment" xmlID="47" parentElement="46">
+    <element xsi:type="layoutElement" xmlID="19" parentSegment="47">
+        <decision>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Was there a new input?</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Was there a new input?</value>
+        </decision>
+        <segment xsi:type="layoutSegment" xmlID="20" parentElement="19">
+            <customDescription>No</customDescription>
+            <description>No</description>
+        </segment>
+        <segment xsi:type="layoutSegment" xmlID="21" parentElement="19">
+            <element xsi:type="layoutElement" xmlID="18" parentSegment="21">
+                <process>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Move Player</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Move Player</value>
+                </process>
+            </element>
+            <element xsi:type="layoutElement" xmlID="25" parentSegment="21">
+                <process>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Draw New
+Screen</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Draw New
+Screen</value>
+                </process>
+            </element>
+            <customDescription>Yes</customDescription>
+            <description>Yes</description>
+        </segment>
+    </element>
+</segment>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="39" parentSegment="7">
+<loopEnd>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>While player is not
+ at the end</customValue>
+    <commandsValid>true</commandsValid>
+    <value>While player is not
+ at the end</value>
+</loopEnd>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="28" parentSegment="7">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Stop Timer</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Stop Timer</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="29" parentSegment="7">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Save the Time as "Score"</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Save the Time as "Score"</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="27" parentSegment="7">
+<process>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Draw "You Win!" screen</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Draw "You Win!" screen</value>
+</process>
+                            </element>
+                            <element xsi:type="layoutElement" xmlID="33" parentSegment="7">
+<decision>
+    <borderColor>0,0,0,255</borderColor>
+    <shapeUpColor>255,255,255,255</shapeUpColor>
+    <shapeDownColor>230,230,230,255</shapeDownColor>
+    <hasShadow>true</hasShadow>
+    <customValue>Is the score big/good enough 
+to be written in the Leaderboard?</customValue>
+    <commandsValid>true</commandsValid>
+    <value>Is the score big/good enough 
+to be written in the Leaderboard?</value>
+</decision>
+<segment xsi:type="layoutSegment" xmlID="34" parentElement="33">
+    <element xsi:type="layoutElement" xmlID="42" parentSegment="34">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Show: "Good run, but not the best. 
+Maybe next time."</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Show: "Good run, but not the best. 
+Maybe next time."</value>
+        </process>
+    </element>
+    <element xsi:type="layoutElement" xmlID="43" parentSegment="34">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Show the Leaderboard</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Show the Leaderboard</value>
+        </process>
+    </element>
+    <element xsi:type="layoutElement" xmlID="44" parentSegment="34">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Any Input</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Any Input</value>
+        </process>
+    </element>
+    <customDescription>No</customDescription>
+    <description>No</description>
+</segment>
+<segment xsi:type="layoutSegment" xmlID="35" parentElement="33">
+    <element xsi:type="layoutElement" xmlID="36" parentSegment="35">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Draw Input Screen for writting
+ the score and the nickname</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Draw Input Screen for writting
+ the score and the nickname</value>
+        </process>
+    </element>
+    <element xsi:type="layoutElement" xmlID="48" parentSegment="35">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>"Under what name should we
+remember your legendary run?"</customValue>
+            <commandsValid>true</commandsValid>
+            <value>"Under what name should we
+remember your legendary run?"</value>
+        </process>
+    </element>
+    <element xsi:type="layoutElement" xmlID="26" parentSegment="35">
+        <loopStart>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Has the nickname been written yet?</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Has the nickname been written yet?</value>
+            <overHanged>true</overHanged>
+        </loopStart>
+        <segment xsi:nil="true"/>
+        <segment xsi:type="layoutSegment" xmlID="45" parentElement="26">
+            <element xsi:type="layoutElement" xmlID="37" parentSegment="45">
+                <process>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Type a letter</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Type a letter</value>
+                </process>
+            </element>
+        </segment>
+    </element>
+    <element xsi:type="layoutElement" xmlID="17" parentSegment="35">
+        <loopEnd>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>repeat</customValue>
+            <commandsValid>true</commandsValid>
+            <value>repeat</value>
+        </loopEnd>
+    </element>
+    <element xsi:type="layoutElement" xmlID="40" parentSegment="35">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Save it to the Leaderboard</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Save it to the Leaderboard</value>
+        </process>
+    </element>
+    <element xsi:type="layoutElement" xmlID="41" parentSegment="35">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Show the Leaderboard</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Show the Leaderboard</value>
+        </process>
+    </element>
+    <element xsi:type="layoutElement" xmlID="38" parentSegment="35">
+        <process>
+            <borderColor>0,0,0,255</borderColor>
+            <shapeUpColor>255,255,255,255</shapeUpColor>
+            <shapeDownColor>230,230,230,255</shapeDownColor>
+            <hasShadow>true</hasShadow>
+            <customValue>Any input</customValue>
+            <commandsValid>true</commandsValid>
+            <value>Any input</value>
+        </process>
+    </element>
+    <customDescription>Yes</customDescription>
+    <description>Yes</description>
+</segment>
+                            </element>
+                            <customDescription>Start Game</customDescription>
+                            <description>Start Game</description>
+                        </segment>
+                    </element>
+                </segment>
+            </element>
+            <element xsi:type="layoutElement" xmlID="14" parentSegment="0">
+                <loopEnd>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>Exit to Menu</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>Exit to Menu</value>
+                </loopEnd>
+            </element>
+            <element xsi:type="layoutElement" xmlID="2" parentSegment="0">
+                <startEnd>
+                    <borderColor>0,0,0,255</borderColor>
+                    <shapeUpColor>255,255,255,255</shapeUpColor>
+                    <shapeDownColor>230,230,230,255</shapeDownColor>
+                    <hasShadow>true</hasShadow>
+                    <customValue>End</customValue>
+                    <commandsValid>true</commandsValid>
+                    <value>End</value>
+                </startEnd>
+            </element>
+        </mainSegment>
+    </flowchart>
+</flowchartSaveContainer>

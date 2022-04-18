@@ -1,0 +1,215 @@
+\hypertarget{_graphics_8h}{}\doxysection{Graphics.\+h File Reference}
+\label{_graphics_8h}\index{Graphics.h@{Graphics.h}}
+{\ttfamily \#include \char`\"{}Arduino.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U8g2lib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Maze\+Generator.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_graphics_8h_a1711232abf72723b5216c206e6bbb175}{NORTH}}~0
+\item 
+\#define \mbox{\hyperlink{_graphics_8h_a072a1ef1143314441742097b799be322}{EAST}}~1
+\item 
+\#define \mbox{\hyperlink{_graphics_8h_af3830320fe6287f717dca9669f417950}{SOUTH}}~2
+\item 
+\#define \mbox{\hyperlink{_graphics_8h_a755da365a2f771fdb9e15af22fee7d74}{WEST}}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_graphics_8h_a5a5806312e2a4ec607460c871696bfd7}{set\+Font\+Default}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_aa13653318c21b0e6b86838e6091bfc9a}{draw\+Menu}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_abb7c64ebd75a9a9ed2f97f895e52f387}{write\+Score}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_aecb1b9aa0ef409dea6fbcb2207f1ae65}{draw\+Leaderboard}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_a0fd1bfe62dd8084fc7e285925d219f60}{draw\+Help}} ()
+\item 
+char \mbox{\hyperlink{_graphics_8h_aaff445d7eafd67e12363bc8e6af45236}{get\+Viewed\+Cell}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_afb37cbf1155e12aeb722ee31cbcb8270}{draw\+Serial}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_ab4b66b962d7696d628bdcd154d1526a9}{draw2\+DPlayer}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_a1013e7d46247a7a664cea5ec934eae9b}{draw2D}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_ab5faa224cc65d6fbce2935d0ed45f600}{draw\+Grid}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_a3260872d918c6673d230120fc49e704a}{draw3D}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_aa17be6b74511484983f4f2356e7ce1a2}{draw\+End\+Screen}} ()
+\item 
+void \mbox{\hyperlink{_graphics_8h_ac28e9770167b7e50d37eaca915cb6ace}{draw\+Pause}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcell}{cell}} \mbox{\hyperlink{_graphics_8h_a0c216fb684f62d9a28b50be610a0d026}{player\+Pos}}
+\item 
+char \mbox{\hyperlink{_graphics_8h_a03089d3c9c5e03b6a7efdcb3f78475bc}{exit\+PosX}}
+\item 
+int \mbox{\hyperlink{_graphics_8h_ab4ae7205573977222eadd0795db193e2}{steps}}
+\item 
+char \mbox{\hyperlink{_graphics_8h_ac2f941c0f8c637f1da039d4e1d0e14fe}{menu\+Position}}
+\item 
+char \mbox{\hyperlink{_graphics_8h_a4caf50e052f49c88c6c43a0a29bba362}{pause\+Position}}
+\item 
+const char $\ast$ \mbox{\hyperlink{_graphics_8h_a477ea6363106d20b974ef84a74df01d3}{menu\+Items}} \mbox{[}$\,$\mbox{]}
+\item 
+const char $\ast$ \mbox{\hyperlink{_graphics_8h_a8b0cb73646a047bb9d25e60184785322}{pause\+Items}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_graphics_8h_a072a1ef1143314441742097b799be322}\label{_graphics_8h_a072a1ef1143314441742097b799be322}} 
+\index{Graphics.h@{Graphics.h}!EAST@{EAST}}
+\index{EAST@{EAST}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{EAST}{EAST}}
+{\footnotesize\ttfamily \#define EAST~1}
+
+\mbox{\Hypertarget{_graphics_8h_a1711232abf72723b5216c206e6bbb175}\label{_graphics_8h_a1711232abf72723b5216c206e6bbb175}} 
+\index{Graphics.h@{Graphics.h}!NORTH@{NORTH}}
+\index{NORTH@{NORTH}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{NORTH}{NORTH}}
+{\footnotesize\ttfamily \#define NORTH~0}
+
+\mbox{\Hypertarget{_graphics_8h_af3830320fe6287f717dca9669f417950}\label{_graphics_8h_af3830320fe6287f717dca9669f417950}} 
+\index{Graphics.h@{Graphics.h}!SOUTH@{SOUTH}}
+\index{SOUTH@{SOUTH}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{SOUTH}{SOUTH}}
+{\footnotesize\ttfamily \#define SOUTH~2}
+
+\mbox{\Hypertarget{_graphics_8h_a755da365a2f771fdb9e15af22fee7d74}\label{_graphics_8h_a755da365a2f771fdb9e15af22fee7d74}} 
+\index{Graphics.h@{Graphics.h}!WEST@{WEST}}
+\index{WEST@{WEST}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{WEST}{WEST}}
+{\footnotesize\ttfamily \#define WEST~3}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_graphics_8h_a1013e7d46247a7a664cea5ec934eae9b}\label{_graphics_8h_a1013e7d46247a7a664cea5ec934eae9b}} 
+\index{Graphics.h@{Graphics.h}!draw2D@{draw2D}}
+\index{draw2D@{draw2D}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw2D()}{draw2D()}}
+{\footnotesize\ttfamily void draw2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_ab4b66b962d7696d628bdcd154d1526a9}\label{_graphics_8h_ab4b66b962d7696d628bdcd154d1526a9}} 
+\index{Graphics.h@{Graphics.h}!draw2DPlayer@{draw2DPlayer}}
+\index{draw2DPlayer@{draw2DPlayer}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw2DPlayer()}{draw2DPlayer()}}
+{\footnotesize\ttfamily void draw2\+DPlayer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_a3260872d918c6673d230120fc49e704a}\label{_graphics_8h_a3260872d918c6673d230120fc49e704a}} 
+\index{Graphics.h@{Graphics.h}!draw3D@{draw3D}}
+\index{draw3D@{draw3D}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw3D()}{draw3D()}}
+{\footnotesize\ttfamily void draw3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_aa17be6b74511484983f4f2356e7ce1a2}\label{_graphics_8h_aa17be6b74511484983f4f2356e7ce1a2}} 
+\index{Graphics.h@{Graphics.h}!drawEndScreen@{drawEndScreen}}
+\index{drawEndScreen@{drawEndScreen}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawEndScreen()}{drawEndScreen()}}
+{\footnotesize\ttfamily void draw\+End\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_ab5faa224cc65d6fbce2935d0ed45f600}\label{_graphics_8h_ab5faa224cc65d6fbce2935d0ed45f600}} 
+\index{Graphics.h@{Graphics.h}!drawGrid@{drawGrid}}
+\index{drawGrid@{drawGrid}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawGrid()}{drawGrid()}}
+{\footnotesize\ttfamily void draw\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_a0fd1bfe62dd8084fc7e285925d219f60}\label{_graphics_8h_a0fd1bfe62dd8084fc7e285925d219f60}} 
+\index{Graphics.h@{Graphics.h}!drawHelp@{drawHelp}}
+\index{drawHelp@{drawHelp}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawHelp()}{drawHelp()}}
+{\footnotesize\ttfamily void draw\+Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_aecb1b9aa0ef409dea6fbcb2207f1ae65}\label{_graphics_8h_aecb1b9aa0ef409dea6fbcb2207f1ae65}} 
+\index{Graphics.h@{Graphics.h}!drawLeaderboard@{drawLeaderboard}}
+\index{drawLeaderboard@{drawLeaderboard}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawLeaderboard()}{drawLeaderboard()}}
+{\footnotesize\ttfamily void draw\+Leaderboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_aa13653318c21b0e6b86838e6091bfc9a}\label{_graphics_8h_aa13653318c21b0e6b86838e6091bfc9a}} 
+\index{Graphics.h@{Graphics.h}!drawMenu@{drawMenu}}
+\index{drawMenu@{drawMenu}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawMenu()}{drawMenu()}}
+{\footnotesize\ttfamily void draw\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_ac28e9770167b7e50d37eaca915cb6ace}\label{_graphics_8h_ac28e9770167b7e50d37eaca915cb6ace}} 
+\index{Graphics.h@{Graphics.h}!drawPause@{drawPause}}
+\index{drawPause@{drawPause}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawPause()}{drawPause()}}
+{\footnotesize\ttfamily void draw\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_afb37cbf1155e12aeb722ee31cbcb8270}\label{_graphics_8h_afb37cbf1155e12aeb722ee31cbcb8270}} 
+\index{Graphics.h@{Graphics.h}!drawSerial@{drawSerial}}
+\index{drawSerial@{drawSerial}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{drawSerial()}{drawSerial()}}
+{\footnotesize\ttfamily void draw\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_aaff445d7eafd67e12363bc8e6af45236}\label{_graphics_8h_aaff445d7eafd67e12363bc8e6af45236}} 
+\index{Graphics.h@{Graphics.h}!getViewedCell@{getViewedCell}}
+\index{getViewedCell@{getViewedCell}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{getViewedCell()}{getViewedCell()}}
+{\footnotesize\ttfamily char get\+Viewed\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_a5a5806312e2a4ec607460c871696bfd7}\label{_graphics_8h_a5a5806312e2a4ec607460c871696bfd7}} 
+\index{Graphics.h@{Graphics.h}!setFontDefault@{setFontDefault}}
+\index{setFontDefault@{setFontDefault}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{setFontDefault()}{setFontDefault()}}
+{\footnotesize\ttfamily void set\+Font\+Default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_graphics_8h_abb7c64ebd75a9a9ed2f97f895e52f387}\label{_graphics_8h_abb7c64ebd75a9a9ed2f97f895e52f387}} 
+\index{Graphics.h@{Graphics.h}!writeScore@{writeScore}}
+\index{writeScore@{writeScore}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{writeScore()}{writeScore()}}
+{\footnotesize\ttfamily void write\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_graphics_8h_a03089d3c9c5e03b6a7efdcb3f78475bc}\label{_graphics_8h_a03089d3c9c5e03b6a7efdcb3f78475bc}} 
+\index{Graphics.h@{Graphics.h}!exitPosX@{exitPosX}}
+\index{exitPosX@{exitPosX}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{exitPosX}{exitPosX}}
+{\footnotesize\ttfamily char exit\+PosX\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_graphics_8h_a477ea6363106d20b974ef84a74df01d3}\label{_graphics_8h_a477ea6363106d20b974ef84a74df01d3}} 
+\index{Graphics.h@{Graphics.h}!menuItems@{menuItems}}
+\index{menuItems@{menuItems}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{menuItems}{menuItems}}
+{\footnotesize\ttfamily const char$\ast$ menu\+Items\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_graphics_8h_ac2f941c0f8c637f1da039d4e1d0e14fe}\label{_graphics_8h_ac2f941c0f8c637f1da039d4e1d0e14fe}} 
+\index{Graphics.h@{Graphics.h}!menuPosition@{menuPosition}}
+\index{menuPosition@{menuPosition}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{menuPosition}{menuPosition}}
+{\footnotesize\ttfamily char menu\+Position\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_graphics_8h_a8b0cb73646a047bb9d25e60184785322}\label{_graphics_8h_a8b0cb73646a047bb9d25e60184785322}} 
+\index{Graphics.h@{Graphics.h}!pauseItems@{pauseItems}}
+\index{pauseItems@{pauseItems}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{pauseItems}{pauseItems}}
+{\footnotesize\ttfamily const char$\ast$ pause\+Items\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_graphics_8h_a4caf50e052f49c88c6c43a0a29bba362}\label{_graphics_8h_a4caf50e052f49c88c6c43a0a29bba362}} 
+\index{Graphics.h@{Graphics.h}!pausePosition@{pausePosition}}
+\index{pausePosition@{pausePosition}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{pausePosition}{pausePosition}}
+{\footnotesize\ttfamily char pause\+Position\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_graphics_8h_a0c216fb684f62d9a28b50be610a0d026}\label{_graphics_8h_a0c216fb684f62d9a28b50be610a0d026}} 
+\index{Graphics.h@{Graphics.h}!playerPos@{playerPos}}
+\index{playerPos@{playerPos}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{playerPos}{playerPos}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structcell}{cell}} player\+Pos\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_graphics_8h_ab4ae7205573977222eadd0795db193e2}\label{_graphics_8h_ab4ae7205573977222eadd0795db193e2}} 
+\index{Graphics.h@{Graphics.h}!steps@{steps}}
+\index{steps@{steps}!Graphics.h@{Graphics.h}}
+\doxysubsubsection{\texorpdfstring{steps}{steps}}
+{\footnotesize\ttfamily int steps\hspace{0.3cm}{\ttfamily [extern]}}
+
