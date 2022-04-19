@@ -15,6 +15,7 @@
 #define EMPTY -2
 #define PILLAR -3
 #define EXIT -4
+#define MAP -5
 
 extern struct cell playerPos;
 extern char maze[MAXX][MAXY];

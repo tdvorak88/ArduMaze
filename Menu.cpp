@@ -5,6 +5,7 @@
 #include "Graphics.h"
 
 char menuPosition = 0;
+
 const char *menuItems[] =
 {
   "Start Game",
@@ -26,19 +27,20 @@ char doMenu() {
       case SELECT:
         return menuPosition;
     }
-    if (menuPosition >= 2){
+    if (menuPosition >= 2) {
       menuPosition = 2;
     }
-    if (menuPosition < 0){
+    if (menuPosition < 0) {
       menuPosition = 0;
     }
     drawMenu();
+    delay(200);
     waitForAnyInput();
-    delay(100);
   } while (1);
 }
 
 char pausePosition = 0;
+
 const char *pauseItems[] =
 {
   "Resume",
@@ -60,13 +62,41 @@ char doPause() {
       case SELECT:
         return pausePosition;
     }
-    if (pausePosition >= 2) {
+    if (pausePosition > 2) {
       pausePosition = 2;
     }
     if (pausePosition < 0) {
       pausePosition = 0;
     }
     drawPause();
+    delay(200);
+  } while (1);
+}
+
+char helpPosition = 1;
+
+char doHelp() {
+  waitForNoInput();
+  do {
+    drawHelp();
+    
+    int input = read_joystick();
+    switch (input) {
+      case DOWN:
+        helpPosition++;
+        break;
+      case UP:
+        helpPosition--;
+        break;
+      case SELECT:
+        return;
+    }
+    if (helpPosition > 2) {
+      helpPosition = 2;
+    }
+    if (helpPosition < 1) {
+      helpPosition = 1;
+    }
     delay(100);
   } while (1);
-} 
+}

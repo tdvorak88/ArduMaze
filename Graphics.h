@@ -13,12 +13,16 @@
 
 extern struct cell playerPos;
 extern char exitPosX;
-extern int steps;
+extern int score;
 extern char menuPosition;
 extern char pausePosition;
 extern const char *menuItems[];
 extern const char *pauseItems[];
-extern int rooms;
+extern int level;
+extern bool mapUnlocked;
+extern bool mapLockedTrigger;
+extern char helpPosition;
+extern String versionArduMaze;
 
 void setFontDefault();
 void drawMenu();
@@ -26,8 +30,8 @@ void drawOptions();
 void drawHelp();
 char getViewedCell();
 void drawSerial();  //only for debugging
-void draw2DPlayer();
-void draw2D();
+void drawMapPlayer();
+void drawMap();
 void drawGrid();
 void draw3D();
 void drawEndScreen();

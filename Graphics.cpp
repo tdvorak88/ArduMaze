@@ -21,8 +21,9 @@ void drawMenu() {
   u8g2.clearBuffer();
 
   u8g2.drawLine(0, 0, u8g2.getDisplayWidth(), 0);
-  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("ArduMaze")) / 2, ROW - 3); // (center of the screen, ROW + Title)
-  u8g2.println("ArduMaze");
+  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("ArduMaze XXX")) / 2, ROW - 3); // (center of the screen, ROW + Title)
+  u8g2.println("ArduMaze ");
+  u8g2.println(versionArduMaze);
   u8g2.drawLine(0, ROW - 2, u8g2.getDisplayWidth(), ROW - 2);
 
   for (byte m = 0; m < 3; m++)  {   //m = number of menu items
@@ -35,46 +36,104 @@ void drawMenu() {
   u8g2.sendBuffer();
 }
 
-/**
-      takes the player input and saves his score into Arduino flash memory
-*/
-
-
 void drawOptions()  {   //TO DO: finish this
+  waitForNoInput();
+
   setFontDefault();
   u8g2.clearBuffer();
+
   u8g2.drawLine(0, 0, u8g2.getDisplayWidth(), 0);
   u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Options")) / 2, ROW - 3);
   u8g2.println("Options");
   u8g2.drawLine(0, ROW - 2, u8g2.getDisplayWidth(), ROW - 2);
 
   u8g2.setFont(u8g2_font_u8glib_4_tr);
-  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("work in progress")) / 2, 2 * ROW); // (center of the screen, ROW + Title)
-  u8g2.println("work in progress");
+  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("COMING IN NEXT PATCH")) / 2, 2 * ROW); // (center of the screen, ROW + Title)
+  u8g2.println("COMING IN NEXT PATCH");
+
   u8g2.sendBuffer();
   setFontDefault();
+  waitForSelect();    //should be in doOptions, if its made someday
 }
 
 void drawHelp()  {
-  setFontDefault();
-  u8g2.clearBuffer();
-  u8g2.drawLine(0, 0, u8g2.getDisplayWidth(), 0);
-  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Help")) / 2, ROW - 3); // (center of the screen, ROW + Title)
-  u8g2.println("Help");
-  u8g2.drawLine(0, ROW - 2, u8g2.getDisplayWidth(), ROW - 2);
+  switch (helpPosition) {   //enables scrolling pages in the Help screne
+    case 1:
+      setFontDefault();
+      u8g2.clearBuffer();
 
-  u8g2.setFont(u8g2_font_u8glib_4_tr);
-  u8g2.setCursor(0, 3 * ROW / 2); // (center of the screen, ROW + Title)
-  u8g2.println("Up = walk");
-  u8g2.setCursor(0, 4 * ROW / 2); // (center of the screen, ROW + Title)
-  u8g2.println("Down = map");
-  u8g2.setCursor(0, 5 * ROW / 2); // (center of the screen, ROW + Title)
-  u8g2.println("Left,Right = look around");
-  u8g2.setCursor(0, 6 * ROW / 2); // (center of the screen, ROW + Title)
-  u8g2.println("Select = pause");
+      u8g2.drawLine(0, 0, u8g2.getDisplayWidth(), 0);
+      u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Help")) / 2, ROW - 3); // (center of the screen, ROW + Title)
+      u8g2.println("Help");
+      u8g2.drawLine(0, ROW - 2, u8g2.getDisplayWidth(), ROW - 2);
 
-  u8g2.sendBuffer();
-  setFontDefault();
+      u8g2.setFont(u8g2_font_u8glib_4_tr);    //change this to more readable font
+
+      u8g2.setCursor(0, 3 * ROW / 2);
+      u8g2.println("CONTROLS:");
+
+      u8g2.setCursor(0, 4 * ROW / 2);
+      u8g2.println("UP = WALK");
+
+      u8g2.setCursor(0, 5 * ROW / 2);
+      u8g2.println("DOWN = MAP");
+
+      u8g2.setCursor(0, 6 * ROW / 2);
+      u8g2.println("LEFT and RIGHT =");
+
+      u8g2.setCursor(0, 7 * ROW / 2);
+      u8g2.println("LOOK AROUND");
+
+      u8g2.setCursor(0, 8 * ROW / 2);
+      u8g2.println("SELECT = PAUSE");
+
+
+      u8g2.drawLine(83, ROW, 83, ROW + (u8g2.getDisplayHeight() - ROW) / 2);
+      u8g2.drawLine(82, ROW, 82, ROW + (u8g2.getDisplayHeight() - ROW) / 2);    //Scroll bar
+
+      u8g2.sendBuffer();
+      setFontDefault();
+      break;
+
+    case 2:
+      setFontDefault();
+      u8g2.clearBuffer();
+
+
+      u8g2.drawLine(0, 0, u8g2.getDisplayWidth(), 0);
+      u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Help")) / 2, ROW - 3); // (center of the screen, ROW + Title)
+      u8g2.println("Help");
+      u8g2.drawLine(0, ROW - 2, u8g2.getDisplayWidth(), ROW - 2);
+
+      u8g2.setFont(u8g2_font_u8glib_4_tr);    //change this to more readable font
+
+
+
+      u8g2.setCursor(0, 3 * ROW / 2);
+      u8g2.println("GOAL:");
+
+      u8g2.setCursor(0, 4 * ROW / 2);
+      u8g2.println("FIND THE EXIT");
+
+      u8g2.setCursor(0, 5 * ROW / 2);
+      u8g2.println("OR THE MAP");
+
+      u8g2.setCursor(0, 6 * ROW / 2);
+      u8g2.println("");
+
+      u8g2.setCursor(0, 7 * ROW / 2);
+      u8g2.println("WHICHEVER COMES");
+
+      u8g2.setCursor(0, 8 * ROW / 2);
+      u8g2.println("FIRST");
+
+      u8g2.drawLine(83, ROW + (u8g2.getDisplayHeight() - ROW) / 2, 83, u8g2.getDisplayHeight());
+      u8g2.drawLine(82, ROW + (u8g2.getDisplayHeight() - ROW) / 2, 82, u8g2.getDisplayHeight());    //Scroll bar
+
+      u8g2.sendBuffer();
+      setFontDefault();
+      break;
+  }
 }
 
 char view = NORTH;   //used in a cyclical change of view
@@ -105,7 +164,7 @@ char getViewedCell(char x, char y) {
       b = (-x);
       break;
   }
-  if (playerPos.x + a > MAXX || playerPos.x + a < 0 || playerPos.y + b > MAXY || playerPos.y + b < 0) {
+  if (playerPos.x + a > MAXX || playerPos.x + a < 0 || playerPos.y + b > MAXY || playerPos.y + b < 0) {   //treats all cells outside maze as empty
     return EMPTY;
   } else {
     return maze[playerPos.x + a][playerPos.y + b];
@@ -119,10 +178,6 @@ void drawSerial() {   //draws the game into a serial monitor
   Serial.print("View: ");
   Serial.print(view);
 
-  Serial.print("\n");
-  Serial.print("Steps: ");
-  Serial.print(steps);
-  Serial.print("\n");
   for (int y = 0; y < MAXY; y++) {
     for (int x = 0; x < MAXX; x++) {
       if (x == playerPos.x && y == playerPos.y) {
@@ -147,7 +202,7 @@ void drawSerial() {   //draws the game into a serial monitor
 /**
       draws the player as an arrow on the map
 */
-void draw2DPlayer() {
+void drawMapPlayer() {
   u8g2.setFont(u8g2_font_u8glib_4_tr);
   switch (view) {
     case NORTH:
@@ -176,27 +231,27 @@ void draw2DPlayer() {
 }
 
 /**
-      draws the game in 2D
+      draws the map
 */
-void draw2D() {
+void drawMap() {
   u8g2.clearBuffer();
   for (int y = 0; y < MAXY; y++) {
     for (int x = 0; x < MAXX; x++) {
       if (maze[x][y] == WALL) {
-        u8g2.drawFrame((zoom * x) + (u8g2.getDisplayWidth() - zoom * MAXX) / 2, (zoom * y) + (u8g2.getDisplayHeight() - zoom * MAXY) / 2, zoom, zoom);  //hollow walls
+        u8g2.drawFrame((zoom * x) + (u8g2.getDisplayWidth() - zoom * MAXX) / 2, (zoom * y) + (u8g2.getDisplayHeight() - zoom * MAXY) / 2, zoom, zoom);
       }
     }
   }
   u8g2.drawFrame(0, 0, 84, 48);   //displays border
-  draw2DPlayer();
+  drawMapPlayer();
   u8g2.sendBuffer();
+  waitForNoInput();
 }
 
 /**
       draws the grid used to later draw the whole scene
 */
-void drawGrid() {
-  u8g2.clearBuffer();
+void drawGrid() {   //TO DO: Split it into separate frames to better render exit
   u8g2.drawLine(0, 0, 32, 18);      //1.1 diagonal
   u8g2.drawLine(52, 29, 83, 47);    //1.2 digonal
   u8g2.drawLine(83, 0, 52, 18);     //2.1 diagonal
@@ -227,9 +282,50 @@ void draw3D() {   //draws the 3D scene in the first person view
   u8g2.clearBuffer();
   drawGrid();
 
+  setFontDefault();
+
+  if (getViewedCell(0, 2) == EXIT) {
+    u8g2.setFont(u8g2_font_4x6_mr);
+    u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("EXIT")) / 2 + 1, (u8g2.getDisplayHeight()) / 2 + (ROW / 4) - 1);
+    u8g2.println("EXIT");
+  }
+
+  if (getViewedCell(0, 1) == EXIT) {
+    u8g2.setFont(u8g2_font_8x13_mr);
+    u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("EXIT")) / 2, (u8g2.getDisplayHeight()) / 2 + (ROW / 2) - 2);
+    u8g2.println("EXIT");
+  }
+
+  if (getViewedCell(0, 0) == EXIT) {
+    u8g2.setFont(u8g2_font_helvR18_tr);
+    u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("EXIT")) / 2, (u8g2.getDisplayHeight()) / 2 + ROW - 2);
+    u8g2.println("EXIT");
+  }
+
+  if (!mapUnlocked) {
+    if (getViewedCell(0, 3) == MAP) {
+      u8g2.setFont(u8g2_font_4x6_mr);
+      u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("MAP")) / 2, (u8g2.getDisplayHeight()) / 2 + (ROW / 4) - 1);
+      u8g2.println("MAP");
+    }
+
+    if (getViewedCell(0, 2) == MAP) {
+      u8g2.setFont(u8g2_font_8x13_mr);
+      u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("MAP")) / 2, (u8g2.getDisplayHeight()) / 2 + (ROW / 2) - 2);
+      u8g2.println("MAP");
+    }
+
+    if (getViewedCell(0, 1) == MAP) {
+      u8g2.setFont(u8g2_font_helvR18_tr);
+      u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("MAP")) / 2, (u8g2.getDisplayHeight()) / 2 + ROW - 2);
+      u8g2.println("MAP");
+    }
+  }
+
   if (getViewedCell(0, 3) == WALL && getViewedCell(0, 3) != EXIT) {
     u8g2.drawBox(32, 18, 20, 12);   //3.Frame
   }
+
   if (getViewedCell(-1, 3) == WALL) {
     u8g2.drawBox(23, 18, 9, 12);
   }
@@ -281,14 +377,27 @@ void draw3D() {   //draws the 3D scene in the first person view
   }
 
   u8g2.setFont(u8g2_font_u8glib_4_tr);
-  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Steps:  ") - u8g2.getStrWidth("Room  ")) / 2 - 5, ROW - 6);
-  u8g2.println("Steps: ");
-  u8g2.println(steps);
+  /*
+  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("SCORE:  ") - u8g2.getStrWidth("LEVEL  ")) / 2 - 1, ROW / 2);
+  u8g2.println("SCORE: ");
+  u8g2.println(score);
+  
+  u8g2.setCursor(u8g2.getDisplayWidth() / 2 + 3, ROW / 2);
+  u8g2.println("LEVEL ");
+  u8g2.println(level);
+  */
 
-  u8g2.setFont(u8g2_font_u8glib_4_tr);
-  u8g2.setCursor(u8g2.getDisplayWidth() / 2 + 6, ROW - 6);
-  u8g2.println("Room ");
-  u8g2.println(rooms);
+  if (mapUnlocked) {
+    u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("MAP UNLOCKED")) / 2 , 4 * ROW - 2);
+    u8g2.println("MAP UNLOCKED");
+  }
+
+  if (mapLockedTrigger && !mapUnlocked) {
+    u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("FIND THE MAP")) / 2 , 4 * ROW - 2);
+    u8g2.println("FIND THE MAP");
+
+    mapLockedTrigger = 0;     //this ensures showing the the text only temporary
+  }
 
   u8g2.sendBuffer();
   delay(300);    //refresh rate of the game
@@ -305,11 +414,11 @@ void drawEndScreen() {
   u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Game Over")) / 2, ROW - 3); // (center of the screen, ROW + Title)
   u8g2.println("Game Over");
   u8g2.drawLine(0, ROW - 2, u8g2.getDisplayWidth(), ROW - 2);
-  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("You took")) / 2, (u8g2.getDisplayHeight()) / 2);
-  u8g2.println("You took ");
+  u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("Your score is")) / 2, (u8g2.getDisplayHeight()) / 2);
+  u8g2.println("Your score is ");
   u8g2.setCursor((u8g2.getDisplayWidth() - u8g2.getStrWidth("XX steps")) / 2, (u8g2.getDisplayHeight()) / 2 + ROW);
-  u8g2.println(steps);
-  u8g2.println(" steps");
+  u8g2.println(score);
+  u8g2.println(" points");
   u8g2.sendBuffer();
 
   delay(1000);
