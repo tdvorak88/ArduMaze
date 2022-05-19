@@ -18,16 +18,16 @@ char read_joystick() {
   if (SW == LOW) {
     input += SELECT;
   }
-  if (X_Axis >= 900) {
+  if (X_Axis >= 800) {
     input += RIGHT;
   }
-  if (X_Axis <= 100) {
+  if (X_Axis <= 200) {
     input += LEFT;
   }
-  if (Y_Axis >= 900) {
+  if (Y_Axis >= 800) {
     input += DOWN;
   }
-  if (Y_Axis <= 100) {
+  if (Y_Axis <= 200) {
     input += UP;
   }
   return input;
@@ -42,4 +42,7 @@ void waitForAnyInput() {
 }
 void waitForSelect() {
   while (read_joystick() != SELECT);
+}
+void waitForNoSelect() {
+  while (read_joystick() == SELECT);
 }

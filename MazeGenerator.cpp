@@ -16,12 +16,8 @@ char exitPosX;
 struct cell mapPos;
 struct cell pillar[plrsmax];
 
-int score;
-int level = 1;
-
 bool mapUnlocked = 0;
 bool mapLockedTrigger = 0;
-
 /**
    Fills maze with walls and empty space.
 */
@@ -31,13 +27,11 @@ void setupMaze() {
       maze[x][y] = EMPTY;
     }
   }
-  for (int x = 0; x < MAXX; x++) { //creates outer row walls
+  for (int x = 0; x < MAXX; x++) { //creates outer walls
     maze[x][0] = WALL;
     maze[x][MAXY - 1] = WALL;
-  }
-  for (int y = 0; y < MAXY; y++) { //creates outer column walls
-    maze[0][y] = WALL;
-    maze[MAXX - 1][y] = WALL;
+    maze[0][x] = WALL;
+    maze[MAXX - 1][x] = WALL;
   }
   int idx;
   for (int x = 2; x < MAXX - 1; x += 2) { //creates pillars
@@ -98,25 +92,37 @@ void startGame() {
 
   playerPos.x = startPosX;  //moves player to startPosX
   playerPos.y = MAXY - 1;  //moves player to startPosY
-
-  mapUnlocked = 0;
+  
   mapLockedTrigger = 0;
 
   waitForNoInput();
+
   do {
     int input = read_joystick();
     switch (input) {
-      case DOWN:
-        if (mapUnlocked) {
-          drawMap();
-        } else {
-          if (!mapLockedTrigger) {    //this is used for temporary showing the "map locked" screne
-            mapLockedTrigger = 1;
-          }
+      case SELECT:    //Pauses the game
+        switch (doPause()) {
+          case 0:
+            break;
+          case 1:
+            if (mapUnlocked) {
+              drawMap();
+            } else {
+              if (!mapLockedTrigger) {    //this is used for temporary showing the "find the map" text
+                mapLockedTrigger = 1;
+              }
+            }
+            break;
+          case 2:
+            switch (doExitGame()) {
+              case 0:
+                break;
+              case 1:
+                return;
+            }
+            break;
         }
-        break;
-
-      case UP:
+      case UP:    //Move Up
         switch (view) {
           case NORTH:
             playerPos.y--;
@@ -148,38 +154,60 @@ void startGame() {
             break;
         }
         break;
-
-      case RIGHT:
+      case RIGHT:   //Look Right
         view++;
         view = view % 4;
         break;
-
-      case LEFT:
+      case LEFT:    //Look Left
         view--;
         if (view < NORTH) {
           view = WEST;
           break;
         }
         break;
-
-      case SELECT:
-        switch (doPause()) {
-          case 0:
+      case DOWN:    //Move Down
+        switch (view) {
+          case NORTH:
+            playerPos.y++;
+            if (maze[playerPos.x][playerPos.y] == WALL) {
+              playerPos.y--;
+              break;
+            }
             break;
-          case 1:
-            doHelp();
+          case EAST:
+            playerPos.x--;
+            if (maze[playerPos.x][playerPos.y] == WALL) {
+              playerPos.x++;
+              break;
+            }
             break;
-          case 2:
-            return;
+          case SOUTH:
+            playerPos.y--;
+            if (maze[playerPos.x][playerPos.y] == WALL) {
+              playerPos.y++;
+              break;
+            }
+            break;
+          case WEST:
+            playerPos.x++;
+            if (maze[playerPos.x][playerPos.y] == WALL) {
+              playerPos.x--;
+              break;
+            }
+            break;
         }
         break;
-    }
 
-    if (playerPos.x == mapPos.x && playerPos.y == mapPos.y) {
-      mapUnlocked = 1;
     }
     //drawSerial();
     draw3D();
+
+    if (playerPos.x == mapPos.x && playerPos.y == mapPos.y) {
+      if (!mapUnlocked) {
+        drawMapUnlocked();
+        mapUnlocked = 1;
+      }
+    }
     waitForAnyInput();
   } while (maze[playerPos.x][playerPos.y] !=  maze[exitPosX][0]);
   drawEndScreen();

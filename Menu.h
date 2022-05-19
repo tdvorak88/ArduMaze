@@ -10,5 +10,7 @@
 */
 char doMenu();
 char doPause();
-char doHelp();
+void doHelp();
+char doExitGame();
+char doOptions();
 #endif

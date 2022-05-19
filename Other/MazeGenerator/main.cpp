@@ -1,7 +1,10 @@
 /*
 TODO:
-port na Arduino (rnd zmìnit seed na pin; printf na 2D rendered maze)
+port na Arduino (rnd zmìnit seed na pin; printf na 2D/3D rendered maze)
 */
+#include stdio.h
+#include stdlib.h
+
 #define MAXX 11
 #define MAXY 11
 //both must be odd numbers because of the maze generation
@@ -28,7 +31,7 @@ void setupMaze()
     {
         for(int y=0; y<MAXY; y++)
         {
-            maze[x][y] = FREE;
+            maze[x][y] = EMPTY;
         }
     }
     for(int x=0; x<MAXX; x++)       //create outer row WALLs

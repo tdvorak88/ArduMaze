@@ -19,7 +19,9 @@
 
 char read_joystick();
 void setupJoystick();
+
 void waitForAnyInput();
 void waitForNoInput();
 void waitForSelect();
+void waitForNoSelect();
 #endif

@@ -4,7 +4,7 @@
 #include "Joystick.h"
 #include "Graphics.h"
 
-char menuPosition = 0;
+char menuPosition;
 
 const char *menuItems[] =
 {
@@ -14,7 +14,8 @@ const char *menuItems[] =
 };
 
 char doMenu() {
-  waitForNoInput();    //stops the menu on a selected option
+  waitForNoInput();
+  menuPosition = 0;
   do {
     int input = read_joystick();
     switch (input) {
@@ -27,7 +28,7 @@ char doMenu() {
       case SELECT:
         return menuPosition;
     }
-    if (menuPosition >= 2) {
+    if (menuPosition > 2) {
       menuPosition = 2;
     }
     if (menuPosition < 0) {
@@ -39,17 +40,18 @@ char doMenu() {
   } while (1);
 }
 
-char pausePosition = 0;
+char pausePosition;
 
 const char *pauseItems[] =
 {
   "Resume",
-  "Help",
+  "Map",
   "Exit",
 };
 
 char doPause() {
-  waitForNoInput();    //stops the menu on a selected option
+  waitForNoInput();
+  pausePosition = 0;
   do {
     int input = read_joystick();
     switch (input) {
@@ -75,11 +77,10 @@ char doPause() {
 
 char helpPosition = 1;
 
-char doHelp() {
+void doHelp() {
   waitForNoInput();
+  helpPosition = 0;
   do {
-    drawHelp();
-    
     int input = read_joystick();
     switch (input) {
       case DOWN:
@@ -97,6 +98,91 @@ char doHelp() {
     if (helpPosition < 1) {
       helpPosition = 1;
     }
+    drawHelp();
+    delay(100);
+  } while (1);
+}
+
+
+const char *exitItems[] =
+{
+  "No",
+  "Yes",
+};
+
+char exitPosition;
+
+char doExitGame() {
+  waitForNoInput();
+  exitPosition = 0;
+  do {
+    int input = read_joystick();
+    switch (input) {
+      case RIGHT:
+        exitPosition++;
+        break;
+      case LEFT:
+        exitPosition--;
+        break;
+      case SELECT:
+        return exitPosition;
+    }
+    if (exitPosition > 1) {
+      exitPosition = 1;
+    }
+    if (exitPosition < 0) {
+      exitPosition = 0;
+    }
+    drawExitGame();
+    delay(100);
+  } while (1);
+}
+
+char optionsPosition;
+char showGrid = 1;
+
+char doOptions() {
+  waitForNoInput();
+  optionsPosition = 0;
+  do {
+    int input = read_joystick();
+    switch (input) {
+      case UP:
+        optionsPosition--;
+        break;
+      case DOWN:
+        optionsPosition++;
+        break;
+      case SELECT:
+        switch (optionsPosition) {
+          case 0:
+            if (mapUnlocked) {
+              mapUnlocked = 0;
+              break;
+            } else {
+              mapUnlocked = 1;
+              break;
+            }
+          case 1:
+            if (showGrid) {
+              showGrid = 0;
+              break;
+            } else {
+              showGrid = 1;
+              break;
+            }
+          case 2:
+            return;
+        }
+    }
+
+    if (optionsPosition > 2) {
+      optionsPosition = 2;
+    }
+    if (optionsPosition < 0) {
+      optionsPosition = 0;
+    }
+    drawOptions();
     delay(100);
   } while (1);
 }

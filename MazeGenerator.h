@@ -4,8 +4,9 @@
 #include "U8g2lib.h"
 #include "Arduino.h"
 
-#define MAXX 11
-#define MAXY 11
+#define MAXX 15
+#define MAXY 15
+//TO DO: change these to variables to be used in options for customizable maze size
 /**
       both must be odd numbers because of the maze generation
 */
@@ -26,7 +27,6 @@ struct cell {
   char y;
 };
 
-const char zoom = 4;  //size of a cell in pixels
 const char plrsmax = ((MAXX - 3) / 2) * ((MAXY - 3) / 2);
 
 void setupMaze();
